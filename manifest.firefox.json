@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "YouTube standard/TV switcher",
+  "description": "This extension allows to switch between desktop/TV versions of the YouTube platform",
+  "version": "0.0.2",
+  "version_name": "0.0.2-alpha",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "assets/icons/main/16x16/icon16.png",
+    "48": "assets/icons/main/48x48/icon48.png",
+    "128": "assets/icons/main/128x128/icon128.png"
+  },
+  "background": {
+    "scripts": ["switcher.js"]
+  },
+  "permissions": ["activeTab"],
+  "applications": {
+    "gecko": {
+      "id": "ajauregui@outlook.com",
+      "strict_min_version": "50.0"
+    }
+  }
+}
