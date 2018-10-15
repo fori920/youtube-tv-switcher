@@ -44,7 +44,7 @@ export function minify () {
 
 export function zipFiles() {
     // Zip file once preceding tasks are completed
-    return gulp.src(`dist/${options.browser}/*`)
+    return gulp.src(`dist/${options.browser}/**`)
         .pipe(zip(`bundle.${options.browser}.zip`))
         .pipe(gulp.dest(`dist`));
 };
