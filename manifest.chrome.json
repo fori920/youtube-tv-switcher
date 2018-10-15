@@ -8,13 +8,13 @@
   "browser_action": {
     "default_icon": "icon.png"
   },
-  "icons": { "16": "icon16.png",
-           "48": "icon48.png",
-          "128": "icon128.png" },
+  "icons": {
+    "16": "/assets/icons/main/16x16/icon16.png",
+    "48": "/assets/icons/main/48x48/icon48.png",
+    "128": "/assets/icons/main/128x128/icon128.png"
+  },
   "background": {
     "scripts": ["switcher.js"]
   },
-  "permissions": [
-    "activeTab"
-  ]
+  "permissions": ["activeTab"]
 }

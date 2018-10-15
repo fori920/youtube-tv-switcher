@@ -1,0 +1,37 @@
+{
+  "name": "youtube-tv-switcher",
+  "version": "0.0.2",
+  "description": "Allows to switch between desktop/TV versions of the YouTube platform in the browser",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "gulp bundle && gulp bundle --browser firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fori920/youtube-tv-switcher.git"
+  },
+  "keywords": [
+    "youtube",
+    "youtube-tv",
+    "chrome",
+    "firefox",
+    "extension"
+  ],
+  "author": "Adan Jauregui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fori920/youtube-tv-switcher/issues"
+  },
+  "homepage": "https://github.com/fori920/youtube-tv-switcher#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-zip": "^4.2.0",
+    "minimist": "^1.2.0"
+  }
+}
