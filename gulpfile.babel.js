@@ -1,20 +1,22 @@
 const gulp = require('gulp');
-const zip = require('gulp-zip');
-const uglify = require('gulp-uglify');
+const gulpif = require('gulp-if');
 const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
+const zip = require('gulp-zip');
 const del = require('del');
 
 const minimist = require('minimist');
 
 const knownOptions =  {
     string: 'browser',
+    boolean: 'debug',
     alias: 'b',
-    default: {'browser': 'chrome'}
+    default: {'browser': 'chrome', 'debug': false}
 };
 
 const options = minimist(process.argv.slice(2), knownOptions);
 
-export const clean = () => del(['dist/chrome', 'dist/firefox']);
+export const clean = () => del(['dist/chrome', 'dist/firefox', 'dist/*.zip']);
 
 export function copyIcons() {
     // Copy required icons
@@ -38,7 +40,7 @@ export function copyHtml() {
 export function minify () {
     // Copy and minify source files
     return gulp.src('src/**/*.js')
-        .pipe(uglify())
+        .pipe(gulpif(!options.debug, uglify()))
         .pipe(gulp.dest(`dist/${options.browser}`));
 };
 
